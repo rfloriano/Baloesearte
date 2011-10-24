@@ -4,5 +4,5 @@
 
 # Environment directory #
 ###################
-env/**/*
+env/*
 
