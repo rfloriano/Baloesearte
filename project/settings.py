@@ -6,6 +6,11 @@ PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+if DEBUG:
+    HOME = "~rafael"
+else:
+    HOME = "~rfloriano"
+
 ADMINS = (
     ('Rafael Floriano da Silva', 'rflorianobr@gmail.com'),
 )
@@ -124,9 +129,12 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'gallery',
+    'clients',
 
     'south',
 )
+
+PHOTOS_PATH = os.path.join(os.path.expanduser(HOME), "Dropbox", "Photos")
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
